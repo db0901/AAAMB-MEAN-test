@@ -1,0 +1,45 @@
+@baseUrl = http://localhost:3000/api
+
+### Create task with missing required fields
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "description": "This task is missing a title, status, and dueDate"
+}
+
+### Create task with past due date
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Past Due Date Task",
+    "status": "Pending",
+    "priority": "High",
+    "dueDate": "2020-01-01",
+    "tags": ["invalid", "test"]
+}
+
+### Create task with invalid status
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Invalid Status Task",
+    "status": "Done", 
+    "dueDate": "2024-12-31"
+}
+
+### Update task with invalid field
+PUT {{baseUrl}}/tasks/675c73143b52b3cc88e0b2ca
+Content-Type: application/json
+
+{
+    "nonExistentField": "This field does not exist"
+}
+
+### Get task with invalid ID format
+GET {{baseUrl}}/tasks/invalidTaskId
+
+### Delete task with non-existent ID
+DELETE {{baseUrl}}/tasks/675c9468ada6b7328036245e

@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3000/api
+@taskId = 675c73143b52b3cc88e0b2ca
+
+### Get all tasks
+GET {{baseUrl}}/tasks
+
+### Get all tasks with filters
+GET {{baseUrl}}/tasks?status=Pending&priority=High&tags=urgent,work&startDate=2024-01-01&endDate=2024-12-31
+
+### Get single task
+GET {{baseUrl}}/tasks/{{taskId}}
+
+### Create new task
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Test Task",
+    "description": "This is a test task",
+    "status": "Pending",
+    "priority": "High",
+    "dueDate": "2024-12-31",
+    "tags": ["test", "important"]
+}
+
+### Update task
+PUT {{baseUrl}}/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+    "status": "Completed",
+    "priority": "Medium"
+}
+
+### Delete task
+DELETE {{baseUrl}}/tasks/{{taskId}}
