@@ -22,15 +22,16 @@ A full-stack task management application built with the MEAN stack (MongoDB, Exp
 ## Prerequisites
 
 - Node.js (v18 or higher)
-- MongoDB
-- Angular CLI (v18.2.11)
 - Docker (optional, for containerized MongoDB)
+- MongoDB (If not using Docker)
 
 ## Installation & Setup
 
 1. **Clone the repository**
 
 2. **Backend Setup**
+
+Ensure you have Node.js and Docker installed. Apart from that, you need Docker Engine running so the container can start.
 
 ```bash
 cd backend
