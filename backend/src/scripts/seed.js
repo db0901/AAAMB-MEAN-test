@@ -38,6 +38,31 @@ const seedData = [
     dueDate: new Date("2024-12-28"),
     tags: ["maintenance", "dependencies"],
   },
+  {
+    title: "Implement User Authentication",
+    description: "Add JWT-based authentication and user management features",
+    status: "Pending",
+    priority: "High",
+    dueDate: new Date("2024-12-15"),
+    tags: ["security", "feature"],
+  },
+  {
+    title: "Optimize Database Queries",
+    description: "Review and optimize MongoDB queries for better performance",
+    status: "Pending",
+    priority: "Medium",
+    dueDate: new Date("2024-12-22"),
+    tags: ["performance", "database"],
+  },
+  {
+    title: "Write Unit Tests",
+    description:
+      "Increase test coverage by adding unit tests for core functionality",
+    status: "Pending",
+    priority: "Medium",
+    dueDate: new Date("2024-12-18"),
+    tags: ["testing", "quality"],
+  },
 ];
 
 const seedDatabase = async () => {

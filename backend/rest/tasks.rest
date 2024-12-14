@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000/api
-@taskId = 675c73143b52b3cc88e0b2ca
+@taskId = replace-with-task-id
 
 ### Get all tasks
 GET {{baseUrl}}/tasks
@@ -28,7 +28,6 @@ PUT {{baseUrl}}/tasks/{{taskId}}
 Content-Type: application/json
 
 {
-    "status": "Completed",
     "priority": "Medium"
 }
 
